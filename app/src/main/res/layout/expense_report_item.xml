@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:gravity="fill_horizontal|fill_vertical"
+    android:orientation="vertical">
+
+    <!-- this view reveals when swipe right -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:tag="reveal-right">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <!-- this view reveals when swipe left -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:tag="reveal-left">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_delete_sweep_black_24dp"
+            android:tint="@android:color/white" />
+    </RelativeLayout>
+
+    <!-- this view is the top with the real items for the recycleview -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:tag="front">
+
+        <ImageView
+            android:id="@+id/er_iv_catIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cat_delivery_truck" />
+
+        <TextView
+            android:id="@+id/er_tv_storeName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="start|top"
+            android:text="Store Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/er_tv_date"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintStart_toEndOf="@+id/er_iv_catIcon"
+            app:layout_constraintTop_toTopOf="@+id/er_iv_catIcon" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="32dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/er_tv_total"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_currency_dollar" />
+
+        <TextView
+            android:id="@+id/er_tv_total"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/passion_one_black"
+            android:text="18500.56"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/er_tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19-04-01"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/er_iv_catIcon"
+            app:layout_constraintStart_toStartOf="@+id/er_tv_storeName" />
+    </android.support.constraint.ConstraintLayout>
+
+    <!-- just a divider-->
+    <View android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="312dp"
+        android:layout_height="0.2dp" />
+
+
+</android.support.constraint.ConstraintLayout>

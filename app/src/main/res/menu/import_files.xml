@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu_imp_cat"
+        android:title="Import Category" />
+    <item
+        android:id="@+id/mnu_imp_stores"
+        android:title="Import Stores" />
+    <item
+        android:id="@+id/mnu_imp_expenses"
+        android:title="Import Expenses" />
+    <item
+        android:id="@+id/mnu_exp_expenses"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="Export Expenses"
+        app:showAsAction="ifRoom" />
+</menu>

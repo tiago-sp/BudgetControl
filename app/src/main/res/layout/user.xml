@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:id="@+id/tv_usr_pic"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/usr_picture"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_usr_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="User Name" />
+
+    <TextView
+        android:id="@+id/tv_initialDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userName"
+        tools:text="Date" />
+
+    <TextView
+        android:id="@+id/tv_since"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/usr_initial_date"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_initialDate"
+        app:layout_constraintEnd_toStartOf="@+id/tv_initialDate" />
+
+    <TextView
+        android:id="@+id/tv_canInputExpesnes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_initialDate"
+        tools:text="Yes" />
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/usr_canInput_Expenese"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_canInputExpesnes"
+        app:layout_constraintEnd_toStartOf="@+id/tv_canInputExpesnes" />
+
+    <ImageView
+        android:id="@+id/tv_usr_selected"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/tv_userName"
+        app:layout_constraintTop_toTopOf="@+id/tv_userName"
+        app:srcCompat="@drawable/check_mark" />
+</android.support.constraint.ConstraintLayout>

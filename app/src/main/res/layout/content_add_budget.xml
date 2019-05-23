@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddBudgetActivity"
+    tools:showIn="@layout/activity_add_budget">
+
+    <TextView
+        android:id="@+id/ab_tv_catName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ab_iv_catIcon"
+        app:layout_constraintStart_toStartOf="@+id/ab_iv_catIcon"
+        app:layout_constraintTop_toBottomOf="@+id/ab_iv_catIcon"
+        tools:text="Category name" />
+
+    <ImageView
+        android:id="@+id/ab_iv_catIcon"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat_delivery_truck" />
+
+    <EditText
+        android:id="@+id/ab_et_total"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="@font/passion_one_black"
+        android:hint="999.99"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@id/ab_bt_save"
+        android:nextFocusForward="@id/ab_bt_save"
+        android:numeric="decimal"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/ab_tv_catName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="32dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/ab_et_total"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ab_et_total"
+        app:srcCompat="@drawable/ic_currency_dollar" />
+
+    <Button
+        android:id="@+id/ab_bt_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Add"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ab_et_total"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ab_et_total"
+        app:layout_constraintTop_toTopOf="@+id/ab_et_total" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/x_blue_square"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ab_et_total">
+
+        <TextView
+            android:id="@+id/ab_tv_min"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="1999.99"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="@+id/ab_tv_max" />
+
+        <TextView
+            android:id="@+id/ab_tv_ave"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="1999.99"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="@+id/ab_tv_max" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Average spent:"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="38dp"
+            android:text="Max spent:"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:text="Min spent:"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/ab_tv_max"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="42dp"
+            android:text="1999.99"
+            android:textAlignment="viewEnd"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView12"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

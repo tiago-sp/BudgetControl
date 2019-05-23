@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">Budget Control</string>
-    <string name="action_settings">Settings</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="usr_initial_date">Since:</string>
+    <string name="usr_canInput_Expenese">Can input expenses?</string>
+    <string name="usr_picture">Users Pictures</string>
+    <string name="nav_user_title">User</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_user">AddUserActivity</string>
+    <string name="can_input_title">Can input expenses</string>
+    <string name="can_not_input_title">Can not input expesnes</string>
+    <string name="save_contact_title">Save Contact</string>
+    <string name="title_activity_add_category">AddCategoryActivity</string>
+    <string name="title_activity_color_picker_dialog">ColorPickerDialog</string>
+    <string name="title_activity_add_expenses_acticity">New Expense</string>
+    <string name="mn_expense_titles">Expenses</string>
+    <string name="title_activity_add_budget">Add Budget</string>
 </resources>

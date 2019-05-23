@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddExpensesActicity"
+    tools:showIn="@layout/activity_add_expenses_acticity">
+
+    <TextView
+        android:id="@+id/ae_tv_catName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ae_iv_catIcon"
+        app:layout_constraintStart_toStartOf="@+id/ae_iv_catIcon"
+        app:layout_constraintTop_toBottomOf="@+id/ae_iv_catIcon"
+        tools:text="Category name" />
+
+    <ImageView
+        android:id="@+id/ae_iv_catIcon"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cat_delivery_truck" />
+
+    <TextView
+        android:id="@+id/tv3_stores_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Store:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ae_tv_catName" />
+
+    <AutoCompleteTextView
+        android:id="@+id/ae_act_store_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:completionThreshold="1"
+        android:editable="true"
+        android:hint="Enter store name"
+        android:nextFocusDown="@id/ae_act_user_name"
+        android:nextFocusForward="@id/ae_act_user_name"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv3_stores_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv3_stores_title" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="User:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv3_stores_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv3_stores_title" />
+
+    <AutoCompleteTextView
+        android:id="@+id/ae_act_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:completionThreshold="1"
+        android:hint="Enter user name"
+        android:nextFocusDown="@id/ae_et_total"
+        android:nextFocusForward="@id/ae_et_total"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ae_act_store_name" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Date:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/ae_et_date"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="dd/mm/yy"
+        android:inputType="date"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/ae_act_user_name" />
+
+    <EditText
+        android:id="@+id/ae_et_total"
+        android:layout_width="155dp"
+        android:layout_height="181dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="@font/passion_one_black"
+        android:hint="999.99"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@id/ae_bt_save"
+        android:nextFocusForward="@id/ae_bt_save"
+        android:numeric="decimal"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ae_act_user_name" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="32dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/ae_et_total"
+        app:layout_constraintEnd_toStartOf="@+id/ae_et_total"
+        app:layout_constraintTop_toTopOf="@+id/ae_et_total"
+        app:srcCompat="@drawable/ic_currency_dollar" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Extra:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/ae_et_extra"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="ex. litres"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/ae_et_date" />
+
+    <Button
+        android:id="@+id/ae_bt_save"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="24dp"
+        android:text="Add"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ae_et_total"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/ae_et_total" />
+</android.support.constraint.ConstraintLayout>

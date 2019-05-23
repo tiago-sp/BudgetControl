@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_report_user"
+        android:icon="@drawable/ic_people_black_24dp"
+        android:title="User" />
+    <item
+        android:id="@+id/navigation_report_category"
+        android:icon="@drawable/ic_location_city_black_24dp"
+        android:title="Category" />
+
+    <item
+        android:id="@+id/navigation_report_store"
+        android:icon="@drawable/ic_store_black_24dp"
+        android:title="Store" />
+    <item
+        android:id="@+id/navigation_report_graphs"
+        android:icon="@drawable/ic_assessment_black_24dp"
+        android:title="Graphs" />
+    <item
+        android:id="@+id/navigation_report_expenses"
+        android:icon="@drawable/ic_attach_money_black_24dp"
+        android:title="@string/mn_expense_titles" />
+
+</menu>
